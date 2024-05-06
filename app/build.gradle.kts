@@ -1,6 +1,6 @@
-
-import sun.jvmstat.monitor.MonitoredVmUtil.mainClass
-
+//import sun.jvmstat.monitor.MonitoredVmUtil.mainClass
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     application
