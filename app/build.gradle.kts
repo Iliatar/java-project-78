@@ -1,5 +1,12 @@
+
+import sun.jvmstat.monitor.MonitoredVmUtil.mainClass
+
+
 plugins {
-    id("java")
+    application
+    distribution
+    checkstyle
+    jacoco
 }
 
 group = "hexlet.code"
@@ -14,6 +21,20 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+application {
+    mainClass = "hexlet.code.App";
+}
+
 tasks.test {
     useJUnitPlatform()
+    // https://technology.lastminute.com/junit5-kotlin-and-gradle-dsl/
+    testLogging {
+        exceptionFormat = TestExceptionFormat.FULL
+        events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+        // showStackTraces = true
+        // showCauses = true
+        showStandardStreams = true
+    }
 }
+
+tasks.jacocoTestReport { reports { xml.required.set(true) } }
