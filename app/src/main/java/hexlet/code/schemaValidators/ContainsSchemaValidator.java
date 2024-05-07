@@ -2,14 +2,14 @@ package hexlet.code.schemaValidators;
 
 import hexlet.code.SchemaValidator;
 
-public class ContainsSchemaValidator implements SchemaValidator {
+public class ContainsSchemaValidator implements SchemaValidator<String> {
     private String substring;
 
     public ContainsSchemaValidator(String substring) {
         this.substring = substring;
     }
     @Override
-    public boolean validateString(String value) {
+    public boolean validateValue(String value) {
         return value.contains(substring);
     }
 }

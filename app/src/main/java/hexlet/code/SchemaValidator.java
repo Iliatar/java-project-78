@@ -1,5 +1,5 @@
 package hexlet.code;
 
-public interface SchemaValidator {
-    boolean validateString(String value);
+public interface SchemaValidator<T> {
+    boolean validateValue(T value);
 }
