@@ -2,12 +2,12 @@ package hexlet.code;
 
 import hexlet.code.schemaValidators.ContainsSchemaValidator;
 import hexlet.code.schemaValidators.MinLengthSchemaValidator;
-import hexlet.code.schemaValidators.RequiredSchemaValidator;
+import hexlet.code.schemaValidators.RequiredStringSchemaValidator;
 
-public class StringSchema extends BaseSchema {
+public class StringSchema extends BaseSchema<String> {
 
     public StringSchema required() {
-        addSchemaValidator(new RequiredSchemaValidator());
+        addSchemaValidator(new RequiredStringSchemaValidator());
         return this;
     }
 

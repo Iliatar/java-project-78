@@ -19,7 +19,7 @@ public abstract class BaseSchema<T> {
         return true;
     }
 
-    protected void addSchemaValidator(SchemaValidator schemaValidator) {
+    protected void addSchemaValidator(SchemaValidator<T> schemaValidator) {
         schemaValidators.put(schemaValidator.getClass().getName(), schemaValidator);
     }
 }
