@@ -1,12 +1,12 @@
 package hexlet.code;
 
 import hexlet.code.schemaValidators.RangeSchemaValidator;
-import hexlet.code.schemaValidators.RequiredNumberSchemaValidator;
 import hexlet.code.schemaValidators.PositiveSchemaValidator;
+import hexlet.code.schemaValidators.RequiredSchemaValidator;
 
 public class NumberSchema extends BaseSchema<Number> {
     public NumberSchema required() {
-        addSchemaValidator(new RequiredNumberSchemaValidator());
+        addSchemaValidator(new RequiredSchemaValidator());
         return this;
     }
 
