@@ -6,6 +6,6 @@ public class PositiveSchemaValidator implements SchemaValidator<Number> {
 
     @Override
     public boolean validateValue(Number value) {
-        return (double) value > 0;
+        return value.doubleValue() > 0;
     }
 }
