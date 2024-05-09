@@ -2,7 +2,7 @@ package hexlet.code.schemas.schemaValidator;
 
 import java.util.Map;
 
-public class MapSizeValidator implements SchemaValidator<Map> {
+public final class MapSizeValidator implements SchemaValidator<Map> {
     private int size;
 
     public  MapSizeValidator(int size) {

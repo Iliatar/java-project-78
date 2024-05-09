@@ -4,8 +4,8 @@ import hexlet.code.schemas.BaseSchema;
 
 import java.util.Map;
 
-public class ShapeSchemaValidator implements SchemaValidator<Map> {
-    Map<String, BaseSchema> schemas;
+public final class ShapeSchemaValidator implements SchemaValidator<Map> {
+    private Map<String, BaseSchema> schemas;
 
     public ShapeSchemaValidator(Map<String, BaseSchema> schemas) {
         this.schemas = schemas;

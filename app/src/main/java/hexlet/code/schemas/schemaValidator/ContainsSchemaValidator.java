@@ -1,6 +1,6 @@
 package hexlet.code.schemas.schemaValidator;
 
-public class ContainsSchemaValidator implements SchemaValidator<String> {
+public final class ContainsSchemaValidator implements SchemaValidator<String> {
     private String substring;
 
     public ContainsSchemaValidator(String substring) {

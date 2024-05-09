@@ -4,7 +4,7 @@ import hexlet.code.schemas.schemaValidator.PositiveSchemaValidator;
 import hexlet.code.schemas.schemaValidator.RangeSchemaValidator;
 import hexlet.code.schemas.schemaValidator.RequiredSchemaValidator;
 
-public class NumberSchema extends BaseSchema<Number> {
+public final class NumberSchema extends BaseSchema<Number> {
     public NumberSchema required() {
         addSchemaValidator(new RequiredSchemaValidator());
         return this;

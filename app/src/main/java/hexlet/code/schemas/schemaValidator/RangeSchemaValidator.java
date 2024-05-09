@@ -1,6 +1,6 @@
 package hexlet.code.schemas.schemaValidator;
 
-public class RangeSchemaValidator implements SchemaValidator<Number> {
+public final class RangeSchemaValidator implements SchemaValidator<Number> {
     private Number minValue;
     private Number maxValue;
 

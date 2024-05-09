@@ -4,7 +4,7 @@ import hexlet.code.schemas.schemaValidator.ContainsSchemaValidator;
 import hexlet.code.schemas.schemaValidator.MinLengthSchemaValidator;
 import hexlet.code.schemas.schemaValidator.RequiredStringSchemaValidator;
 
-public class StringSchema extends BaseSchema<String> {
+public final class StringSchema extends BaseSchema<String> {
 
     public StringSchema required() {
         addSchemaValidator(new RequiredStringSchemaValidator());

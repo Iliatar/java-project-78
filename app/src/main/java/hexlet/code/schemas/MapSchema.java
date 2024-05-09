@@ -6,7 +6,7 @@ import hexlet.code.schemas.schemaValidator.ShapeSchemaValidator;
 
 import java.util.Map;
 
-public class MapSchema extends BaseSchema<Map> {
+public final class MapSchema extends BaseSchema<Map> {
     public MapSchema sizeof(int size) {
         addSchemaValidator(new MapSizeValidator(size));
         return this;

@@ -1,6 +1,6 @@
 package hexlet.code.schemas.schemaValidator;
 
-public class RequiredSchemaValidator implements SchemaValidator {
+public final class RequiredSchemaValidator implements SchemaValidator {
 
     @Override
     public boolean validateValue(Object value) {
