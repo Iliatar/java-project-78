@@ -10,6 +10,9 @@ public class RangeSchemaValidator implements SchemaValidator<Number> {
     }
     @Override
     public boolean validateValue(Number value) {
+        if (value == null) {
+            return true;
+        }
         return value.doubleValue() >= minValue.doubleValue() && value.doubleValue() <= maxValue.doubleValue();
     }
 }

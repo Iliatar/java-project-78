@@ -10,6 +10,9 @@ public class MapSizeValidator implements SchemaValidator<Map> {
     }
     @Override
     public boolean validateValue(Map value) {
+        if (value == null) {
+            return true;
+        }
         return value.size() == size;
     }
 }

@@ -13,6 +13,10 @@ public class ShapeSchemaValidator implements SchemaValidator<Map> {
 
     @Override
     public boolean validateValue(Map value) {
+        if (value == null) {
+            return true;
+        }
+
         for (var key : schemas.keySet()) {
             if (value.containsKey(key)) {
                 if (!schemas.get(key).isValid(value.get(key))) {
