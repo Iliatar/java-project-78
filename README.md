@@ -5,7 +5,4 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c7febc4b77e3bbd37b60/test_coverage)](https://codeclimate.com/github/Iliatar/java-project-78/test_coverage)
 
 #### Description
-<p>This is a data-validation library. It has classes for string validation</p>
-
-#### Asciinema
-<p>There will be demo asciinemas</p>
+<p>This is a data-validation library. It impelemnts functional for string, number and map validation</p>
