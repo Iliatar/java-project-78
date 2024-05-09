@@ -7,8 +7,8 @@ import java.util.Map;
 public final class ShapeSchemaValidator implements SchemaValidator<Map> {
     private Map<String, BaseSchema> schemas;
 
-    public ShapeSchemaValidator(Map<String, BaseSchema> schemas) {
-        this.schemas = schemas;
+    public ShapeSchemaValidator(Map<String, BaseSchema> val) {
+        this.schemas = val;
     }
 
     @Override

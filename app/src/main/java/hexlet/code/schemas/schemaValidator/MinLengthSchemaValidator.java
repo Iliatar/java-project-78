@@ -3,8 +3,8 @@ package hexlet.code.schemas.schemaValidator;
 public final class MinLengthSchemaValidator implements SchemaValidator<String> {
     private int minLength;
 
-    public MinLengthSchemaValidator(int minLength) {
-        this.minLength = minLength;
+    public MinLengthSchemaValidator(int val) {
+        this.minLength = val;
     }
     @Override
     public boolean validateValue(String value) {

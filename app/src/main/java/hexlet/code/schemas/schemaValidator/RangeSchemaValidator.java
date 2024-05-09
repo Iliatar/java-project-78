@@ -4,9 +4,9 @@ public final class RangeSchemaValidator implements SchemaValidator<Number> {
     private Number minValue;
     private Number maxValue;
 
-    public RangeSchemaValidator(Number minValue, Number maxValue) {
-        this.minValue = minValue;
-        this.maxValue = maxValue;
+    public RangeSchemaValidator(Number minVal, Number maxVal) {
+        this.minValue = minVal;
+        this.maxValue = maxVal;
     }
     @Override
     public boolean validateValue(Number value) {
