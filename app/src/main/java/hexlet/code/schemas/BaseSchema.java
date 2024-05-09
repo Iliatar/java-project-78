@@ -12,7 +12,7 @@ public abstract class BaseSchema<T> {
         schemaValidators = new HashMap<String, SchemaValidator<T>>();
     }
 
-    public boolean isValid(T value) {
+    public final boolean isValid(T value) {
         for (var schemaValidator : schemaValidators.values()) {
             if (!schemaValidator.validateValue(value)) {
                 return false;
