@@ -1,6 +1,4 @@
-package hexlet.code.schemas;
-
-import hexlet.code.SchemaValidator;
+package hexlet.code.schemas.schemaValidator;
 
 public class MinLengthSchemaValidator implements SchemaValidator<String> {
     private int minLength;

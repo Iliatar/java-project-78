@@ -1,9 +1,8 @@
-package hexlet.code;
+package hexlet.code.schemas;
 
-import hexlet.code.schemas.BaseSchema;
-import hexlet.code.schemas.RangeSchemaValidator;
-import hexlet.code.schemas.PositiveSchemaValidator;
-import hexlet.code.schemas.RequiredSchemaValidator;
+import hexlet.code.schemas.schemaValidator.PositiveSchemaValidator;
+import hexlet.code.schemas.schemaValidator.RangeSchemaValidator;
+import hexlet.code.schemas.schemaValidator.RequiredSchemaValidator;
 
 public class NumberSchema extends BaseSchema<Number> {
     public NumberSchema required() {

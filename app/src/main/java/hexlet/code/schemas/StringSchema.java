@@ -1,9 +1,8 @@
-package hexlet.code;
+package hexlet.code.schemas;
 
-import hexlet.code.schemas.BaseSchema;
-import hexlet.code.schemas.ContainsSchemaValidator;
-import hexlet.code.schemas.MinLengthSchemaValidator;
-import hexlet.code.schemas.RequiredStringSchemaValidator;
+import hexlet.code.schemas.schemaValidator.ContainsSchemaValidator;
+import hexlet.code.schemas.schemaValidator.MinLengthSchemaValidator;
+import hexlet.code.schemas.schemaValidator.RequiredStringSchemaValidator;
 
 public class StringSchema extends BaseSchema<String> {
 

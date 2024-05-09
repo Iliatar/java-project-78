@@ -1,6 +1,6 @@
-package hexlet.code.schemas;
+package hexlet.code.schemas.schemaValidator;
 
-import hexlet.code.SchemaValidator;
+import hexlet.code.schemas.BaseSchema;
 
 import java.util.Map;
 

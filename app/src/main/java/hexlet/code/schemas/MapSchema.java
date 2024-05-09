@@ -1,9 +1,8 @@
-package hexlet.code;
+package hexlet.code.schemas;
 
-import hexlet.code.schemas.BaseSchema;
-import hexlet.code.schemas.MapSizeValidator;
-import hexlet.code.schemas.RequiredSchemaValidator;
-import hexlet.code.schemas.ShapeSchemaValidator;
+import hexlet.code.schemas.schemaValidator.MapSizeValidator;
+import hexlet.code.schemas.schemaValidator.RequiredSchemaValidator;
+import hexlet.code.schemas.schemaValidator.ShapeSchemaValidator;
 
 import java.util.Map;
 
