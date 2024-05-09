@@ -34,8 +34,11 @@ public final class AppTest {
         assertTrue(schema.contains("wh").minLength(5).isValid("what does the fox say"));
         assertFalse(schema.minLength(45).isValid("what does the fox say"));
 
-        var schema1 = v.string();
-        assertFalse(schema1.minLength(4).minLength(10).isValid("Hexlet"));
+        schema = v.string();
+        assertFalse(schema.minLength(4).minLength(10).isValid("Hexlet"));
+
+        schema = v.string();
+        assertTrue(schema.minLength(5).contains("vue").isValid(""));
     }
 
     @Test
@@ -62,6 +65,10 @@ public final class AppTest {
         assertTrue(schema.isValid(10));
         assertTrue(schema.isValid(15));
         assertFalse(schema.isValid(16));
+
+        schema = v.number();
+
+        assertTrue(schema.positive().range(5, 15).isValid(null));
     }
 
     @Test
@@ -90,6 +97,9 @@ public final class AppTest {
         assertTrue(schema.isValid(data));
         data.put("key3", "value3");
         assertFalse(schema.isValid(data));
+
+        schema = v.map();
+        assertTrue(schema.sizeof(6).isValid(null));
     }
 
     @Test

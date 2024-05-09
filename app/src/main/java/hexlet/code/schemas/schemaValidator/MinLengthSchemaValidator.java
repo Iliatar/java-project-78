@@ -8,7 +8,7 @@ public class MinLengthSchemaValidator implements SchemaValidator<String> {
     }
     @Override
     public boolean validateValue(String value) {
-        if (value == null) {
+        if (value == null || value == "") {
             return true;
         }
         return value.length() >= minLength;
