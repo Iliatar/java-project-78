@@ -6,3 +6,5 @@
 
 #### Description
 <p>This is a data-validation library. It impelemnts functional for string, number and map validation</p>
+<p>Validator class provides three validation schemas for different data types - string, number and map</p>
+<p>Each schema may be configured for different validations, for example: null validation of size validation</p>
