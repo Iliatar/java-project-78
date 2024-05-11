@@ -1,23 +1,22 @@
 package hexlet.code.schemas;
 
-import hexlet.code.schemas.schemaValidator.ContainsSchemaValidator;
-import hexlet.code.schemas.schemaValidator.MinLengthSchemaValidator;
-import hexlet.code.schemas.schemaValidator.RequiredStringSchemaValidator;
-
 public final class StringSchema extends BaseSchema<String> {
 
     public StringSchema required() {
-        addSchemaValidator(new RequiredStringSchemaValidator());
+        addPredicate("required",
+                value -> !(value == null || value.length() == 0));
         return this;
     }
 
     public StringSchema contains(String substring) {
-        addSchemaValidator(new ContainsSchemaValidator(substring));
+        addPredicate("contains",
+                value -> value == null || value == "" || value.contains(substring));
         return this;
     }
 
     public StringSchema minLength(int minLength) {
-        addSchemaValidator(new MinLengthSchemaValidator(minLength));
+        addPredicate("minLength",
+                value -> value == null || value == "" || value.length() >= minLength);
         return this;
     }
 }

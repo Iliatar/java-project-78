@@ -3,8 +3,9 @@ package hexlet.code.schemas.schemaValidator;
 import hexlet.code.schemas.BaseSchema;
 
 import java.util.Map;
+import java.util.function.Predicate;
 
-public final class ShapeSchemaValidator implements SchemaValidator<Map> {
+public final class ShapeSchemaValidator implements Predicate<Map> {
     private Map<String, BaseSchema> schemas;
 
     public ShapeSchemaValidator(Map<String, BaseSchema> val) {
@@ -12,7 +13,7 @@ public final class ShapeSchemaValidator implements SchemaValidator<Map> {
     }
 
     @Override
-    public boolean validateValue(Map value) {
+    public boolean test(Map value) {
         if (value == null) {
             return true;
         }
